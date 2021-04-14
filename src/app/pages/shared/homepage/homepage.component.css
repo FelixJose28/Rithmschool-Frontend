@@ -1,0 +1,92 @@
+/* nav design */
+.mynavbar{
+  background-color: rgb(0, 0, 0,0.90);
+  padding-right: 20px;
+  padding-top: 10px;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 4px;
+  position: fixed;
+}
+nav>ul>li{
+  float: left;
+  margin-right: 15px;
+  list-style: none;
+}
+.linksnavbar{
+  float: right;
+  height: 100%;
+}
+.myimg{
+  width: 10%;
+  height: 10%;
+}
+
+nav>ul>li:hover{
+  background-color: #fff;
+  color: black;
+}
+
+/* homeimage */
+.homeimage{
+  margin-top: 2100px;
+  width: 85%;
+  height: 600px;
+  display: block;
+  margin: auto;
+}
+/* Card div */
+.img-card{
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+}
+.card-container{
+  display: flex;
+}
+.cardp{
+  margin: 2%;
+  background-color: #E7E7E7;
+  padding: 2%;
+  width: 70%;
+  border-radius: 20px
+}
+.cardp>*{
+  text-align: center;
+}
+
+
+/* benefits-div */
+.benefits-container{
+  display: flex;
+
+}
+.benefits-div{
+  background-color: #F86161;
+  height: 90%;
+}
+.cardb{
+  margin: 2%;
+  padding: 2%;
+  width: 70%;
+  text-align: center;
+}
+.div-title{
+  text-align: center;
+  margin-top: 2%;
+}
+
+/* footer */
+
+footer{
+  background-color: rgb(0, 0, 0);
+}
+footer>*{
+  color: #fff
+}
+a{
+  color: white;
+}
+.icon{
+  width: 40px;
+}
