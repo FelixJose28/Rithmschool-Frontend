@@ -20,6 +20,7 @@ nav>ul>li{
 .myimg{
   width: 10%;
   height: 10%;
+  margin-top: 100px;
 }
 
 nav>ul>li:hover{
@@ -48,6 +49,7 @@ nav>ul>li:hover{
   margin: 2%;
   background-color: #E7E7E7;
   padding: 2%;
+  height: 100%;
   width: 70%;
   border-radius: 20px
 }
@@ -59,12 +61,14 @@ nav>ul>li:hover{
 /* benefits-div */
 .benefits-container{
   display: flex;
+  height: 100%;
 
 }
 .benefits-div{
   background-color: #F86161;
-  height: 90%;
+  height: 100%;
 }
+
 .cardb{
   margin: 2%;
   padding: 2%;
@@ -82,11 +86,74 @@ footer{
   background-color: rgb(0, 0, 0);
 }
 footer>*{
-  color: #fff
+  color: #fff;
+  margin-top: 1.5%;
 }
 a{
   color: white;
 }
-.icon{
-  width: 40px;
+
+.fa {
+  padding: 18px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 10px;
+}
+.social-media{
+  margin-top: 8%;
+}
+.after-text-footer{
+  margin-top: 10%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #027FB5;
+  color: white;
+}
+.fa-github {
+  background: #55ACEE;
+  color: white;
+}
+
+
+/* Responsive */
+@media (max-width: 610px) {
+  .card-container{
+    display: block;
+  }
+  .card-container>.cardp{
+    margin: auto;
+    margin-top: 3%;
+  }
+  .benefits-container{
+    display: block;
+  }
+  .benefits-container>.cardb:last-child{
+    padding-bottom: 10%;
+  }
+  .benefits-container>.cardb{
+    margin: auto;
+    margin-top: 10%;
+  }
+  footer{
+    margin-top: 3%;
+  }
+  .mynavbar{
+    position:static;
+  }
 }
