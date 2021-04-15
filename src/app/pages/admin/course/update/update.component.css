@@ -1,0 +1,14 @@
+.topDiv{
+  margin: auto;
+  width: 90%;
+  padding: 0.6%;
+  margin-top: 2.5%;
+}
+.containerc{
+  width: 90%;
+  margin-top: 2%;
+}
+textarea{
+  resize: none;
+}
+
