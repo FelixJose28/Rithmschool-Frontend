@@ -1,12 +1,20 @@
 /* nav design */
 .mynavbar{
-  background-color: rgb(0, 0, 0,0.90);
+  background-color: rgb(0, 0, 0);
   padding-right: 20px;
   padding-top: 10px;
   width: 100%;
-  margin-top: 20px;
   padding-bottom: 4px;
   position: fixed;
+}
+.fa-bars{
+  background-color: #3B5998;
+  float: right;
+  margin: 0px;
+  padding: 0px;
+}
+.barra{
+  margin-bottom: 20px;
 }
 nav>ul>li{
   float: left;
@@ -20,21 +28,17 @@ nav>ul>li{
 .myimg{
   width: 10%;
   height: 10%;
-  margin-top: 100px;
 }
 
-nav>ul>li:hover{
-  background-color: #fff;
-  color: black;
-}
+
 
 /* homeimage */
 .homeimage{
-  margin-top: 2100px;
   width: 85%;
   height: 600px;
   display: block;
   margin: auto;
+  padding-top: 8%;
 }
 /* Card div */
 .img-card{
