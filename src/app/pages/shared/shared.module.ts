@@ -1,3 +1,4 @@
+import { NavbarComponent } from './../../components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import {ProfileModule} from './profile/profile.module'
 import { CoursesComponent } from './courses/courses.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CoursesModule } from './courses/courses.module';
 
 
 @NgModule({
@@ -15,13 +17,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
-    CoursesComponent,
     PageNotFoundComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
-    ProfileModule
+    ProfileModule,
+    CoursesModule
   ]
 })
 export class SharedModule { }

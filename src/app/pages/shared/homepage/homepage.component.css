@@ -34,11 +34,12 @@ nav>ul>li{
 
 /* homeimage */
 .homeimage{
+  padding-top: 15vh;
   width: 85%;
-  height: 600px;
+  height: 80%;
   display: block;
   margin: auto;
-  padding-top: 8%;
+
 }
 /* Card div */
 .img-card{
@@ -136,9 +137,14 @@ a{
 
 
 /* Responsive */
-@media (max-width: 610px) {
+@media (max-width: 690px) {
   .card-container{
     display: block;
+  }
+  .homeimage{
+    padding-top: 15vh;
+    width: 90%;
+    height: 80%;
   }
   .card-container>.cardp{
     margin: auto;
