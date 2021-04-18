@@ -9,17 +9,21 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  
+
   ngOnInit(): void {
     this.showHide();
   }
+
   showHide(){
-    const iconMenu = document.querySelector('#menuOption');
-    const linksNavBarId = document.querySelector('#linksNavBarId');
-    iconMenu?.addEventListener('click',()=>
-      {
-        linksNavBarId?.classList.toggle("linksnavbar")
-      })
+    const toggle = document.querySelector('.navbar-toggle');
+    const navbarLink = document.getElementsByClassName('navbar-links');
+
+    toggle?.addEventListener('click',()=>{
+      for (let i = 0; i < navbarLink.length; i++) {
+        navbarLink[i].classList.toggle('activate')
+      }
+    });
+    
   }
 
 }

@@ -3,70 +3,66 @@
 :root{
   --red: #F86161;
 }
-.mynavbar{
-  background-color: rgb(0, 0, 0);
-  padding-right: 20px;
-  padding-top: 10px;
+
+*{
+  box-sizing:inherit;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar ul{
   width: 100%;
-  padding-bottom: 4px;
-  position: fixed;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
 }
-.fa-bars{
-  background-color: #3B5998;
-  float: right;
-  margin: 0px;
-  padding: 0px;
+.navbar li{
+  padding: 1rem;
+  list-style-type: none;
 }
-.barra{
-  margin-bottom: 20px;
+.navbar a{
+  text-decoration: none;
+  color: white;
 }
-nav>ul>li{
-  float: left;
-  margin-right: 15px;
-  list-style: none;
+.navbar-logo{
+  flex: 1;
+  font-size: 1.5rem;
+  user-select: none;
 }
-.linksnavbar{
-  float: right;
-  height: 100%;
+.navbar-toggle{
+  display: none;
 }
 .myimg{
   width: 20vh;
 }
-.menuBars{
-  display: none;
-  cursor: pointer;
-  background-color: black;
+.navbar-links:hover{
+  background-color: white;
 }
-i{
-  background-color: black;
-  color: white;
+.navbar-links:hover a{
+  color: var(--red);
 }
 
-.viewLinks{
-  float: none;
-  height: 100%;
-}
-.linksnavbar>li>a:hover{
-  background-color: var(--red);
-}
 @media (max-width: 690px) {
-  .menuBars{
+
+  .navbar ul{
+    flex-wrap: wrap;
+  }
+  .navbar li{
+    border: solid black 1px;
+  }
+  .navbar-toggle{
     display: block;
-    float: right;
-    font-size: 30px;
   }
 
-
-
-  .linksnavbar{
-    float: none;
-    height: 100%;
+  .navbar-links{
     display: none;
-  }
-  nav>ul>li{
     width: 100%;
-    float: none;
-    display: block;
-    list-style: none;
+    text-align: center;
   }
+  .activate{
+    display: block;
+  }
+
 }
+

@@ -10,6 +10,10 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
+    path:'n',
+    component:NavbarComponent
+  },
+  {
     path:'admin',
     loadChildren: ()=>import('./pages/admin/admin.module').then(m=>m.AdminModule)
   },
