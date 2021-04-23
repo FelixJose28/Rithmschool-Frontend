@@ -26,10 +26,7 @@ export class RegisterComponent implements OnInit {
 
   authRegister() {
     const user = this.contactForm.value;
-    this.auth.signIn(user).subscribe({
-      next: (x)=>{console.log(x)},
-      error: (x)=>{console.log(x)}
-    })
+    this.auth.signIn(user).then((x)=>console.log(x))
     console.log(user);
   }
 

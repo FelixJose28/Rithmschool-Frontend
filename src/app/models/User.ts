@@ -1,8 +1,9 @@
 export interface User{
-  UserId: number;
-  Name:string;
-  LastName:string;
-  Email:string;
-  Password:string;
-  RoleId:number;
+  userId: number;
+  name:string;
+  lastName:string;
+  email:string;
+  password:string;
+  roleId:number;
+  token: string;
 }

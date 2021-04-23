@@ -25,10 +25,7 @@ export class LoginComponent implements OnInit {
 
   authLogin() {
     const user = this.contactForm.value;
-    this.auth.signUp(user).subscribe({
-      next: (x)=>{console.log(x,"asd")},
-      error: (err)=>{console.log(err)}
-    })
+    this.auth.signUp(user).then((x)=>this.auth.redirectForUser(x!))
     console.log(user);
   }
 }
