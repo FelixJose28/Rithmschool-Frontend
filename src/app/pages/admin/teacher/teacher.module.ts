@@ -6,6 +6,7 @@ import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 import { DetailsComponent } from './details/details.component';
 import { TeacherComponent } from './teacher.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { TeacherComponent } from './teacher.component';
     TeacherComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     CommonModule,
     TeacherRoutingModule
   ]

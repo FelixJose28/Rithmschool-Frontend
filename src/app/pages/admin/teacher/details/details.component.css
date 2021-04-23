@@ -1,12 +1,13 @@
 .topDiv{
   margin: auto;
   width: 90%;
-  padding: 0.6%;
-  margin-top: 2.5%;
+  padding: 0.2%;
+  height: 55px;
+  margin-top: 2%;
 }
 .containerc{
   width: 90%;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 textarea{
   resize: none;

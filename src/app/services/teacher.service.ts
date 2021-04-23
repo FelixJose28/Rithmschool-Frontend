@@ -18,7 +18,7 @@ export class TeacherService {
     return this.http.post<Teacher>(fullURL,teacher);
   }
 
-  editTeacher(teacher: Teacher): Observable<Teacher>{
+  updateTeacher(teacher: Teacher): Observable<Teacher>{
     const fullURL = `${this.apiURL}/Teacher/UpdateCourse`;
     return this.http.put<Teacher>(fullURL,teacher);
   }

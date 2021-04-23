@@ -1,7 +1,7 @@
 export interface Teacher{
-  TeacherId: number,
-  Name: string,
-  LastName: string,
-  Email: string,
-  Skills: string
+  teacherId: number,
+  name: string,
+  lastName: string,
+  email: string,
+  skills: string
 }

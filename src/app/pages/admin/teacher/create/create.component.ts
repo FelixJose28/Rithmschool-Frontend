@@ -1,3 +1,5 @@
+import { TeacherService } from './../../../../services/teacher.service';
+import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  contactForm = this.fb.group({
+    Name: [''],
+    LastName: [''],
+    Email: [''],
+    Skills: ['']
+  })
+
+  constructor(
+    private fb: FormBuilder,
+    private teacher: TeacherService) { }
 
   ngOnInit(): void {
+  }
+  createTeacher(){
+    const teacher = this.contactForm.value;
+    console.log(teacher)
+    this.teacher.createTeacher(teacher).subscribe({
+      next: (x)=>console.log(x),
+      error: (err)=>console.log(err)
+    });
   }
 
 }

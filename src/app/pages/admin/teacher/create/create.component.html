@@ -2,21 +2,18 @@
   <h1 class="text-white ml-4">Create a teacher</h1>
 </div>
 <div class="containerc">
-  <form action="">
+  <form action="" [formGroup]="contactForm" (submit)="createTeacher() ">
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded "  type="text" placeholder="Name" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " formControlName="Name"  type="text" placeholder="Name" name="" id="">
     </div>
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded "  type="text" placeholder="Last Name" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " formControlName="LastName"  type="text" placeholder="Last Name" name="" id="">
     </div>
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded "  type="email" placeholder="Email" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " formControlName="Email"  type="email" placeholder="Email" name="" id="">
     </div>
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded "  type="text" placeholder="Date Bird" name="" id="">
-    </div>
-    <div class="form-group">
-      <textarea class="form-control w-50 mx-auto rounded " placeholder="Skills"  rows="3"></textarea>
+      <textarea class="form-control w-50 mx-auto rounded " formControlName="Skills" placeholder="Skills"  rows="3"></textarea>
     </div>
 
       <button class="btn btn-danger d-block mx-auto  w-25">Create</button>
