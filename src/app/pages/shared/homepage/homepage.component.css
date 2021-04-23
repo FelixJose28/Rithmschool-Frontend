@@ -1,43 +1,9 @@
-/* nav design */
-.mynavbar{
-  background-color: rgb(0, 0, 0);
-  padding-right: 20px;
-  padding-top: 10px;
-  width: 100%;
-  padding-bottom: 4px;
-  position: fixed;
-}
-.fa-bars{
-  background-color: #3B5998;
-  float: right;
-  margin: 0px;
-  padding: 0px;
-}
-.barra{
-  margin-bottom: 20px;
-}
-nav>ul>li{
-  float: left;
-  margin-right: 15px;
-  list-style: none;
-}
-.linksnavbar{
-  float: right;
-  height: 100%;
-}
-.myimg{
-  width: 10%;
-  height: 10%;
-}
-
-
-
 /* homeimage */
 .homeimage{
-  padding-top: 15vh;
-  width: 85%;
-  height: 80%;
   display: block;
+  padding-top: 5vh;
+  width: 95%;
+  height: 40%;
   margin: auto;
 
 }

@@ -6,12 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'admin',
+    redirectTo:'shared',
     pathMatch:'full'
-  },
-  {
-    path:'n',
-    component:NavbarComponent
   },
   {
     path:'admin',

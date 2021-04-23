@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-center align-items-center login-container">
-  <form class="login-form text-center" id="myForm">
+  <form class="login-form text-center" id="myForm"  [formGroup]="contactForm" (submit)="authLogin()">
     <img src="../../../../assets/user.png">
     <div class="form-group">
-      <input type="email" required class="form-control rounded-pill form-control-lg" placeholder="Email">
+      <input type="email" required formControlName="email" class="form-control rounded-pill form-control-lg" placeholder="Email">
     </div>
     <div class="form-group">
-      <input type="password" required class="form-control rounded-pill form-control-lg" placeholder="Password">
+      <input type="password" required formControlName="password" class="form-control rounded-pill form-control-lg" placeholder="Password">
     </div>
     <button type="submit" class="btn mt-5 rounded-pill btn-lg btn-custom btn-block text-uppercase">Iniciar
       sesion</button>
