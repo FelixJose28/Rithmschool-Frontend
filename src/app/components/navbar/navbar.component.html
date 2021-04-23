@@ -1,10 +1,37 @@
-<nav class="navbar">
-  <ul>
-    <li class="navbar-logo"><img src="../../../assets/logo w.png" class="myimg"></li>
-    <li class="navbar-toggle"><i class="fa fa-bars"></i></li>
-    <li class="navbar-links"><a href="#">Courses</a></li>
-    <li class="navbar-links"><a href="#">Abaout us</a></li>
-    <li class="navbar-links"><a href="#">Our Team</a></li>
-    <li class="navbar-links"><a href="#">Login</a></li>
-  </ul>
-</nav>
+<div  class="h-100" [ngSwitch]='userRol'>
+  <div *ngSwitchCase='Roles.admin' [ngTemplateOutlet]='adminOptions'></div>
+  <div *ngSwitchCase='Roles.student' [ngTemplateOutlet]='studentOptions'></div>
+  <div *ngSwitchCase='undefined' [ngTemplateOutlet]='studentOptions'></div>
+</div>
+
+<ng-template #studentOptions>
+
+
+  <nav class="navbar">
+    <ul>
+      <li class="navbar-logo"   ><i routerLink="/shared/homepage" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
+      <li class="navbar-toggle" ><i routerLink="/shared/register"  class="fa fa-bars"></i></li>
+      <li class="navbar-links"  ><a routerLink="/student/mycourses/list" href="#">Courses</a></li>
+      <li class="navbar-links"  ><a routerLink="/shared/homepage" href="#">Abaout us</a></li>
+      <li class="navbar-links"  ><a routerLink="/admin/teacher/list" href="#">Our Team</a></li>
+      <li class="navbar-links"  ><a routerLink="shared/login" href="#">Login</a></li>
+    </ul>
+  </nav>
+
+</ng-template>
+<ng-template #adminOptions>
+  <nav class="navbar">
+    <ul>
+      <li class="navbar-logo"   ><i routerLink="/shared/homepage" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
+      <li class="navbar-toggle" ><i routerLink="/shared/register"  class="fa fa-bars"></i></li>
+      <li class="navbar-links"  ><a routerLink="/admin/course" href="#">Courses</a></li>
+      <li class="navbar-links"  ><a routerLink="/shared/homepage" href="#">Abaout us</a></li>
+      <li class="navbar-links"  ><a routerLink="/admin/teacher/list" href="#">Our Team</a></li>
+      <li class="navbar-links"  ><a routerLink="shared/login" href="#">Login</a></li>
+    </ul>
+  </nav>
+</ng-template>
+
+
+
+
