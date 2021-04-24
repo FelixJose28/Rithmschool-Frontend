@@ -1,21 +1,28 @@
 <div class="topDiv bg-danger">
-  <h1 class="text-white ml-4">Create a teacher</h1>
+  <h1 class="text-white ml-4">Edit Teacher</h1>
 </div>
 <div class="containerc">
-  <form action="" [formGroup]="contactForm" (submit)="createTeacher() ">
-    <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " formControlName="Name"  type="text" placeholder="Name" name="" id="">
+  <form action="" [formGroup]="contactForm" (submit)="updateTeacher()">
+    <div class="form-group w-50 mx-auto">
+      <label class="" for="">Name</label>
+      <input class="form-control  rounded " formControlName="Name" value="{{teacherCurrenData?.name}}"  type="text" name="" id="">
     </div>
-    <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " formControlName="LastName"  type="text" placeholder="Last Name" name="" id="">
+    <div class="form-group w-50 mx-auto">
+      <label class="" for="">Last Name</label>
+      <input class="form-control  rounded " formControlName="LastName" value="{{teacherCurrenData?.lastName}}"  type="text" name="" id="">
     </div>
-    <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " formControlName="Email"  type="email" placeholder="Email" name="" id="">
+    <div class="form-group w-50 mx-auto">
+      <label class="" for="">Email</label>
+      <input class="form-control rounded " formControlName="Email" value="{{teacherCurrenData?.email}}"  type="email"  name="" id="">
     </div>
-    <div class="form-group">
-      <textarea class="form-control w-50 mx-auto rounded " formControlName="Skills" placeholder="Skills"  rows="3"></textarea>
+    <div class="form-group w-50 mx-auto">
+      <label class="" for="">Skills</label>
+      <textarea class="form-control   rounded " formControlName="Skills" value="{{teacherCurrenData?.skills}}"   rows="3"></textarea>
     </div>
+    <div class="row w-50 mx-auto">
 
-      <button class="btn btn-danger d-block mx-auto  w-25">Create</button>
+      <button class="btn btn-danger d-block mx-auto  w-25" type="submit">Edit</button>
+      <button class="btn btn-success d-block mx-auto  w-25" (click)="goBack()">Back</button>
+    </div>
   </form>
 </div>

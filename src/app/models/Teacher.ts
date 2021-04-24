@@ -5,3 +5,4 @@ export interface Teacher{
   email: string,
   skills: string
 }
+
