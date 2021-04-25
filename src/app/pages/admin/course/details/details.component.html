@@ -4,21 +4,21 @@
 <div class="containerc">
   <form action="">
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " disabled  type="text" placeholder="Title" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " value="{{courseDetail?.title}}" disabled  type="text" placeholder="Title" name="" id="">
     </div>
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " disabled  type="text" placeholder="Teacher" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " value="{{courseDetail?.teacherId}}" disabled  type="text" placeholder="Teacher" name="" id="">
     </div>
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " disabled  type="number" placeholder="Duration Hrs" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " value="{{courseDetail?.duration}}" disabled  type="number" placeholder="Duration Hrs" name="" id="">
     </div>
     <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " disabled  type="text" placeholder="Price" name="" id="">
+      <input class="form-control w-50 mx-auto rounded " value="{{courseDetail?.price}}" disabled  type="text" placeholder="Price" name="" id="">
     </div>
     <div class="form-group">
-      <textarea class="form-control w-50 mx-auto rounded " disabled placeholder="Description"  rows="3"></textarea>
+      <textarea class="form-control w-50 mx-auto rounded " value="Description" disabled placeholder="Description"  rows="3"></textarea>
     </div>
 
-      <button class="btn btn-success d-block mx-auto  w-25">Back</button>
+      <button class="btn btn-success d-block mx-auto  w-25" (click)="goBack()">Back</button>
   </form>
 </div>

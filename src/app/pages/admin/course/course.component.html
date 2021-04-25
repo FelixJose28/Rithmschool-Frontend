@@ -11,14 +11,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Js</td>
-      <td>Otto</td>
-      <td>12</td>
+    <tr *ngFor="let course of courses">
+      <td>{{course.title}}Js</td>
+      <td>{{course.teacherId}}</td>
+      <td>{{course.duration}}</td>
       <td>
-        <a class="p-2 mx-1 text-info">   <i class="fa fa-eye" aria-hidden="true"></i></a>
-        <a class="p-2 mx-1 text-success"><i class="fa fa-edit"></i></a>
-        <a class="p-2 mx-1 text-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+        <a class="p-2 mx-1 text-info" [routerLink]="['../details', course.courseId]">   <i class="fa fa-eye" aria-hidden="true"></i></a>
+        <a class="p-2 mx-1 text-success" [routerLink]="['../update', course.courseId]"><i class="fa fa-edit"></i></a>
+        <a class="p-2 mx-1 text-danger" (click)="deleteCourse(course.courseId)" ><i class="fa fa-trash" aria-hidden="true"></i></a>
       </td>
     </tr>
   </tbody>
