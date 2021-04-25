@@ -31,8 +31,8 @@ export class TeacherService {
     const fullURL = `${this.apiURL}/Teacher/GetTeacher/${id}`;
     return this.http.get<Teacher>(fullURL);
   }
-  getAllTeacher(){
+  getAllTeacher(): Observable<Teacher[]>{
     const fullURL = `${this.apiURL}/Teacher/GetTeachers`;
-    return this.http.get<Teacher>(fullURL);
+    return this.http.get<Teacher[]>(fullURL);
   }
 }
