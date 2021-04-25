@@ -91,4 +91,8 @@ export class AuthenticationService {
         throw new Error(`Invalid role: ${user.roleId}`);
     }
   }
+  getUserId(id:number):Observable<User>{
+    const fullUrl = `${this.apiUrl}/Authentication/GetUser/${id}`;
+    return this.http.get<User>(fullUrl);
+  }
 }

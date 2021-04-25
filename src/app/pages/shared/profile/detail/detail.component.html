@@ -3,17 +3,17 @@
     <h1 class="text-center mb-4 text-danger">My Profile</h1>
 
     <div class="form-group">
-      <input type="email" disabled required class="form-control rounded-pill form-control-lg" placeholder="Name">
+      <input type="text" disabled value="{{user?.name}}" class="form-control rounded-pill form-control-lg" placeholder="Name">
     </div>
     <div class="form-group">
-      <input type="text" disabled required class="form-control rounded-pill form-control-lg" placeholder="Last Name">
+      <input type="text" disabled value="{{user?.lastName}}" class="form-control rounded-pill form-control-lg" placeholder="Last Name">
     </div>
     <div class="form-group">
-      <input type="text" disabled required class="form-control rounded-pill form-control-lg" placeholder="Email">
+      <input type="text" disabled value="{{user?.email}}" class="form-control rounded-pill form-control-lg">
     </div>
     <div class="form-group">
-      <input type="text" disabled required class="form-control rounded-pill form-control-lg" placeholder="Password">
+      <input type="text" disabled value="{{user?.password}}" class="form-control rounded-pill form-control-lg">
     </div>
-    <button type="submit" class="btn btn-success mt-5 w-50 mx-auto rounded-pill btn-block text-uppercase">Back</button>
+    <button (click)="goBack()" class="btn btn-success mt-5 w-50 mx-auto rounded-pill btn-block text-uppercase">Back</button>
   </form>
 </div>
