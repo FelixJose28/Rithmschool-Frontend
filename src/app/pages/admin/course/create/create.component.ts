@@ -26,7 +26,7 @@ export class CreateComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private authService: AuthenticationService,
     private teacherService: TeacherService,
-    private serviceTarea: CourseService,
+    private courseTarea: CourseService,
     private fb: FormBuilder,
     private location: Location,
     private router: Router
@@ -69,7 +69,7 @@ export class CreateComponent implements OnInit {
 
 
   createCourse() {
-    this.serviceTarea.post(this.contactForm).subscribe({
+    this.courseTarea.post(this.contactForm).subscribe({
       next: (res) =>{
           this.router.navigate(['/pasante/tareas/tareasentregadas']);
           console.log(res)

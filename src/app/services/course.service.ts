@@ -34,6 +34,27 @@ export class CourseService {
 
     return this.http.post<Course>(url, formData, { headers });
   }
+
+
+
+  update(form: FormGroup): Observable<Course> {
+    const formData = new FormData();
+    const url = `${this.apiUrl}/Course/CreateCourse`;
+
+    console.log(form.getRawValue());
+
+    const headers = new HttpHeaders('multipart/form-data');
+
+    // ! Bang operator to allow `null` exceptions to pop up
+    formData.append('duration', form.get('duration')!.value);
+    formData.append('price', form.get('price')!.value);
+    formData.append('teacherId', form.get('teacherId')!.value);
+    formData.append('file', form.get('file')!.value);
+
+    return this.http.post<Course>(url, formData, { headers });
+  }
+
+
   deleteCourse(id:number): Observable<Course>{
     const fullURL = `${this.apiUrl}/Course/RemoveCourse/${id}`;
     return this.http.delete<Course>(fullURL);
