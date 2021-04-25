@@ -1,7 +1,7 @@
 import { Teacher } from './../../../models/Teacher';
 import { TeacherService } from 'src/app/services/teacher.service';
 import { Component, OnInit } from '@angular/core';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-teacher',
@@ -13,31 +13,45 @@ export class TeacherComponent implements OnInit {
   teachers: Teacher[] = [];
   constructor(
     private teacherService: TeacherService
-  ) {
-    this.teacherService.getAllTeacher().subscribe({
-      next: (teacherResponse)=> console.log(teacherResponse),
-      error: (x)=>console.log(x)
-    })
-   }
+  ) {}
 
   ngOnInit(): void {
-    this.getAll();
+    this.getAllTareas();
   }
-  getAll(){
+  private getAllTareas(){
     this.teacherService.getAllTeacher().subscribe({
-      next: (teacherResponse)=> this.teachers = teacherResponse,
+      next: (teacherResponse)=> {
+        this.teachers = teacherResponse
+        console.log(this.teachers)
+      },
       error: (x)=>console.log(x)
     })
   }
   deleteTeacher(id: number){
-    this.teacherService.deleteTeacher(id).subscribe({
-      next: (x)=>
-      {
-          this.getAll();
-          console.log(x)
-      },
-      error:(x)=>console.log(x)
+    Swal.fire({
+      title: 'Do you want to delete this teacher?',
+      showCancelButton: true,
+      confirmButtonText: `Delete`,
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Deleted!', 'The teacher has been deleted', 'success');
+
+        this.teacherService.deleteTeacher(id).subscribe({
+          next: (x)=>{
+            console.log(x)
+            this.getAllTareas();},
+          error:(x)=>console.log(x)
+        })
+        console.log('asdasd')
+      } else if (result.isDenied) {
+
+        Swal.fire("Teacher don't deleted", '', 'info')
+      }
     })
+
+
   }
 
 }
