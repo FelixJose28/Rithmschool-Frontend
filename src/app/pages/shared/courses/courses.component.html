@@ -2,38 +2,28 @@
   <h1 class="text-white ml-4">Our Courses</h1>
 </div>
 <div class="containerc">
-  <div class="rowc">
 
-    <div class="cardp col">
 
-      <div class="row">
-        <div class="col-4">
-          <img class="img-fluid img rounded" src="../../../../assets/jslogo.png"  alt="">
+    <div class="row">
+
+      <div class="col-5 cardp mx-auto" *ngFor="let course of courses">
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid img rounded" src="../../../../assets/jslogo.png"  alt="">
+          </div>
+          <div class="col-8">
+            <h3 class="ml-3 mt-4">{{course.title}}</h3>
+          </div>
         </div>
-        <div class="col-8">
-          <h3 class="ml-3 mt-4">Js Intermediate</h3>
+        <div>
+          <button class="btn btn-success mt-3 rounded-pill mx-auto d-block w-50" [routerLink]="['../details', course.courseId]">Details</button>
+          <button class="btn btn-danger mt-3 rounded-pill mx-auto d-block w-50" [routerLink]="['./details',course.courseId]">Get</button>
         </div>
       </div>
-      <button class="btn btn-success mt-3 rounded-pill mx-auto d-block w-50">Deatils</button>
-      <button class="btn btn-danger mt-3 rounded-pill mx-auto d-block w-50">Apply</button>
 
     </div>
 
-    <div class="cardp col">
 
-      <div class="row">
-        <div class="col-4">
-          <img class="img-fluid img rounded" src="../../../../assets/jslogo.png"  alt="">
-        </div>
-        <div class="col-8">
-          <h3 class="ml-3 mt-4">Js Intermediate</h3>
-        </div>
-      </div>
-      <button class="btn btn-success mt-3 rounded-pill mx-auto d-block w-50">Deatils</button>
-      <button class="btn btn-danger mt-3 rounded-pill mx-auto d-block w-50">Get</button>
- </div>
-
-  </div>
 </div>
 
 

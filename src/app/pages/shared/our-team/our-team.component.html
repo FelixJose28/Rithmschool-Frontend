@@ -2,19 +2,12 @@
 <div class="topDiv bg-danger">
   <h1 class="text-white ml-4">Teachers Courses</h1>
 </div>
-
-<div class="btnCreateDiv">
-  <button class="btn btn-success mt-4" [routerLink]="['../create']">Create Teacher</button>
-</div>
-
 <div class="containerc" *ngFor="let teacher of teachers">
 
   <div class="cardp">
     <div class="row">
       <div class="col-5">
         <a class="p-2 mx-1 text-info"     [routerLink]="['../details', teacher.teacherId]">   <i class="fa fa-eye" aria-hidden="true"></i></a>
-        <a class="p-2 mx-1 text-success" [routerLink]="['../update', teacher.teacherId]"><i class="fa fa-edit"></i></a>
-        <a class="p-2 mx-1 text-danger" (click)="deleteTeacher(teacher.teacherId)"><i class="fa fa-trash" aria-hidden="true"></i></a>
       </div>
       <div class="col-7" >
         <h2 >{{teacher.name}}</h2>

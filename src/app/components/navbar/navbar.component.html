@@ -9,12 +9,12 @@
 
   <nav class="navbar">
     <ul>
-      <li class="navbar-logo"   ><i routerLink="/shared/homepage" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
-      <li class="navbar-toggle" ><i routerLink="/shared/register"  class="fa fa-bars"></i></li>
-      <li class="navbar-links"  ><a routerLink="/student/mycourses/list" href="#">Courses</a></li>
-      <li class="navbar-links"  ><a routerLink="/shared/homepage" href="#">Abaout us</a></li>
-      <li class="navbar-links"  ><a routerLink="/admin/teacher/list" href="#">Our Team</a></li>
-      <li class="navbar-links"  ><a routerLink="shared/login" href="#">Login</a></li>
+      <li class="navbar-logo"   ><i [routerLink]="['/shared/homepage']" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
+      <li class="navbar-toggle" ><i  class="fa fa-bars"></i></li>
+      <li class="navbar-links"  ><a [routerLink]="['/shared/courses/list']" href="#">Courses</a></li>
+      <li class="navbar-links"  ><a [routerLink]="['/shared/homepage']" href="#">Abaout us</a></li>
+      <li class="navbar-links"  ><a [routerLink]="['/shared/ourTeam']" href="#">Our Team</a></li>
+      <li class="navbar-links"  ><a [routerLink]="['/shared/login']" href="#">Login</a></li>
     </ul>
   </nav>
 
@@ -24,7 +24,7 @@
     <ul>
       <li class="navbar-logo"   ><i routerLink="/shared/homepage" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
       <li class="navbar-toggle" ><i routerLink="/shared/register"  class="fa fa-bars"></i></li>
-      <li class="navbar-links"  ><a routerLink="/admin/course" href="#">Courses</a></li>
+      <li class="navbar-links"  ><a routerLink="/admin/course/list" href="#">Courses</a></li>
       <li class="navbar-links"  ><a routerLink="/shared/homepage" href="#">Abaout us</a></li>
       <li class="navbar-links"  ><a routerLink="/admin/teacher/list" href="#">Our Team</a></li>
       <li class="navbar-links"  ><a routerLink="shared/login" href="#">Login</a></li>

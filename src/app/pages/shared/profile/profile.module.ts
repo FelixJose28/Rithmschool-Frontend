@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {UpdateComponent} from  './update/update.component'
@@ -10,7 +11,10 @@ import { ProfileRoutingModule } from './profile-routing.module';
   declarations: [UpdateComponent,DetailComponent],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ]
 })
 export class ProfileModule { }

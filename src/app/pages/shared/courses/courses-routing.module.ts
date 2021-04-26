@@ -14,7 +14,7 @@ const routes: Routes = [
     component: CoursesComponent
   },
   {
-    path:'detail',
+    path:'details/:id',
     component: DetailsComponent
   }
 ];

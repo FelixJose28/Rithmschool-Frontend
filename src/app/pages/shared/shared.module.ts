@@ -9,6 +9,7 @@ import {ProfileModule} from './profile/profile.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoursesModule } from './courses/courses.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OurTeamComponent } from './our-team/our-team.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    OurTeamComponent
   ],
   imports: [
     ReactiveFormsModule,

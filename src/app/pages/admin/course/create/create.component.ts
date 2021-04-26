@@ -76,9 +76,6 @@ export class CreateComponent implements OnInit {
         },
       error: (err) =>{
         console.error(err);
-        if(err['error']=='Esta tarea ya ha sido entregada por este usuario'){
-          this.fueEntregada = true;
-        }
       }
     });
 

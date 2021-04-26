@@ -25,7 +25,7 @@ export class DetailComponent implements OnInit {
         this.userId = x?.userId;
         console.log(this.userId)
       }).then(()=>{
-          this.authenticationService.getUserId(this.userId).subscribe({
+          this.authenticationService.getUserById(this.userId).subscribe({
             next:(userResponse)=>{
               this.user = userResponse
             },

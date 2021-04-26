@@ -84,15 +84,19 @@ export class AuthenticationService {
   redirectForUser(user: User) {
     switch (user.roleId) {
       case Role.admin:
-        return this.router.navigate(['/admin']);
+        return this.router.navigate(['/admin/course']);
       case Role.student:
-        return this.router.navigate(['/student'])
+        return this.router.navigate(['/shared/courses/list'])
       default:
         throw new Error(`Invalid role: ${user.roleId}`);
     }
   }
-  getUserId(id:number):Observable<User>{
+  getUserById(id:number):Observable<User>{
     const fullUrl = `${this.apiUrl}/Authentication/GetUser/${id}`;
     return this.http.get<User>(fullUrl);
+  }
+  update(user:User):Observable<User>{
+    const fullUrl = `${this.apiUrl}//Authentication/UpdateUser`;
+    return this.http.put<User>(fullUrl,user);
   }
 }
