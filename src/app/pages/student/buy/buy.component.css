@@ -1,17 +1,15 @@
-i{
-  cursor: pointer;
-}
 .topDiv{
   margin: auto;
   width: 90%;
   padding: 0.6%;
   margin-top: 2.5%;
 }
-.btnCreateDiv{
+.containerc{
   width: 90%;
-  margin: auto;
-  display: block;
+  margin-top: 2%;
 }
-.btn{
-  width: 18%;
+textarea{
+  resize: none;
 }
+
+

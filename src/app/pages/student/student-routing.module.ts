@@ -1,3 +1,4 @@
+import { BuyComponent } from './buy/buy.component';
 import { StudentComponent } from './student.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:'student',
     component: StudentComponent
+  },
+  {
+    path:'buy/:id',
+    component: BuyComponent
   },
   {
     path:'mycourses',

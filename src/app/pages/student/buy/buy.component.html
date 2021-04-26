@@ -1,0 +1,34 @@
+<div class="topDiv bg-danger">
+  <h1 class="text-white ml-4">Create a course</h1>
+</div>
+
+<div class="containerc">
+  <form action=""  (submit)="buyCourse()">
+
+
+
+    <div class="form-group">
+      <input class="form-control w-50 mx-auto rounded " disabled value="{{courseData?.duration}}"   type="number"  name="" id="">
+    </div>
+    <div class="form-group">
+      <input class="form-control w-50 mx-auto rounded " disabled value="{{courseData?.teacherId}}"   type="number"  name="" id="">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control w-50 mx-auto rounded " disabled value="{{courseData?.price}}"  type="text" name="" id="">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control w-50 mx-auto rounded " disabled placeholder="Description"  rows="3"></textarea>
+    </div>
+
+
+
+
+    <div class="row w-50 mx-auto">
+
+      <button class="btn btn-danger d-block mx-auto  w-25" type="submit">Confirm</button>
+      <button class="btn btn-success d-block mx-auto  w-25" (click)="goBack()">Back</button>
+    </div>
+  </form>
+</div>
+
