@@ -7,30 +7,36 @@
 
 
     <div class="mt-4 w-50 mx-auto form-group">
-      <input type="file" class="form-control" (change)="onFileSelected($event)"   >
+      <label for="">File</label>
+      <input type="file" class="form-control w-100" (change)="onFileSelected($event)"   >
       <input type="hidden" name="fileHidden" />
     </div>
 
-    <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " formControlName="duration"  type="number" placeholder="Duration Hrs" name="" id="">
+    <div class="form-group w-50 mx-auto">
+
+      <label for="">File</label>
+      <input class="form-control  rounded " formControlName="duration"  type="number" placeholder="Duration Hrs" name="" id="">
     </div>
 
-    <div class="form-group">
-      <select class="d-block mx-auto form-control w-50" formControlName="teacherId">
-        <option hidden>Seleccionar Convocatoria</option>
+    <div class="form-group w-50 mx-auto">
+      <label for="">Teacher</label>
+      <select class="d-block form-control " formControlName="teacherId">
+        <option hidden>Select a teacher</option>
         <option *ngFor="let teacher of teachers"   [value]="teacher.teacherId">{{teacher.name}}</option>
       </select>
     </div>
 
 
 
-    <div class="form-group">
-      <input class="form-control w-50 mx-auto rounded " formControlName="price"  type="text" placeholder="Price" name="" id="">
+    <div class="form-group w-50 mx-auto">
+      <label for="">Price</label>
+      <input class="form-control  rounded " formControlName="price"  type="text" placeholder="Price" name="" id="">
     </div>
-    <div class="form-group">
-      <textarea class="form-control w-50 mx-auto rounded " placeholder="Description"  rows="3"></textarea>
+    <div class="form-group w-50 mx-auto">
+      <label  for="">Description</label>
+      <textarea class="form-control  rounded " placeholder="Description"  rows="3"></textarea>
     </div>
-    <div class="row w-50 mx-auto">
+    <div class="row w-50 mx-auto mb-4">
 
       <button class="btn btn-danger d-block mx-auto  w-25" type="submit">Create</button>
       <button class="btn btn-success d-block mx-auto  w-25" (click)="goBack()">Back</button>

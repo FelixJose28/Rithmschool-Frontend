@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
@@ -20,7 +21,8 @@ export class UpdateComponent implements OnInit {
   });
   constructor(
     private fb: FormBuilder,
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private location:Location
   ) {
     this.authService.getCurrentUser()
       .then((userResponse)=>{
@@ -43,6 +45,9 @@ export class UpdateComponent implements OnInit {
       error:(x)=>console.log(x)
     })
     console.log(user);
+  }
+  goBack(){
+    this.location.back();
   }
 
 }

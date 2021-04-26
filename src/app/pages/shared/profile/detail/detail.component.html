@@ -1,19 +1,33 @@
-<div class="d-flex justify-content-center align-items-center login-container">
-  <form class="login-form text-center" id="myForm">
-    <h1 class="text-center mb-4 text-danger">My Profile</h1>
+<div class="topDiv bg-danger">
+  <h1 class="text-white ml-4">Profile details</h1>
+</div>
+<div class="containerc">
+  <form action="">
+    <div class="form-group  w-50 mx-auto">
+      <label for="">Name</label>
+      <input class="form-control  rounded " value="{{user?.name}}" disabled  type="text" placeholder="Title" name="" id="">
+    </div>
+    <div class="form-group w-50 mx-auto">
 
-    <div class="form-group">
-      <input type="text" disabled value="{{user?.name}}" class="form-control rounded-pill form-control-lg" placeholder="Name">
+      <label for="">Last Name</label>
+      <input class="form-control  rounded " value="{{user?.lastName}}" disabled  type="text" placeholder="Teacher" name="" id="">
     </div>
-    <div class="form-group">
-      <input type="text" disabled value="{{user?.lastName}}" class="form-control rounded-pill form-control-lg" placeholder="Last Name">
+    <div class="form-group w-50 mx-auto">
+
+      <label for="">Email</label>
+      <input class="form-control  rounded " value="{{user?.email}}" disabled  type="number" placeholder="Duration Hrs" name="" id="">
     </div>
-    <div class="form-group">
-      <input type="text" disabled value="{{user?.email}}" class="form-control rounded-pill form-control-lg">
+    <div class="form-group w-50 mx-auto">
+
+      <label for="">Password</label>
+      <input class="form-control  rounded " value="{{user?.password}}" disabled  type="text" placeholder="Price" name="" id="">
     </div>
-    <div class="form-group">
-      <input type="text" disabled value="{{user?.password}}" class="form-control rounded-pill form-control-lg">
+    <div class="form-group  w-50 mx-auto">
+
+      <label for="">Description</label>
+      <textarea class="form-control  rounded " value="Description" disabled placeholder="Description"  rows="3"></textarea>
     </div>
-    <button (click)="goBack()" class="btn btn-success mt-5 w-50 mx-auto rounded-pill btn-block text-uppercase">Back</button>
+
+      <button class="btn btn-success d-block mx-auto mb-4  w-25" (click)="goBack()">Back</button>
   </form>
 </div>
