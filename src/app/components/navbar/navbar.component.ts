@@ -52,7 +52,7 @@ export class NavbarComponent implements OnInit, OnChanges {
   }
   logout(){
     this.auth.logout();
-    this.router.navigateByUrl('/shared/home');
+    this.router.navigateByUrl('/shared/homepage');
   }
   get Roles() {
     return Role;

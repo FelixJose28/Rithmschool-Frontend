@@ -1,7 +1,7 @@
 <div  class="h-100" [ngSwitch]='userRol'>
   <div *ngSwitchCase='Roles.admin' [ngTemplateOutlet]='adminOptions'></div>
   <div *ngSwitchCase='Roles.student' [ngTemplateOutlet]='studentOptions'></div>
-  <div *ngSwitchCase='undefined' [ngTemplateOutlet]='studentOptions'></div>
+  <div *ngSwitchCase='undefined' [ngTemplateOutlet]='noLogged'></div>
 </div>
 
 <ng-template #studentOptions>
@@ -15,7 +15,23 @@
       <li class="navbar-links"  ><a [routerLink]="['/shared/courses/list']" href="#">Courses</a></li>
       <li class="navbar-links"  ><a [routerLink]="['/shared/homepage']" href="#">Abaout us</a></li>
       <li class="navbar-links"  ><a [routerLink]="['/shared/ourTeam']" href="#">Our Team</a></li>
-      <li class="navbar-links"  ><a [routerLink]="['/shared/login']" href="#">Login</a></li>
+      <li class="navbar-links"  ><a (click)="logout()" href="#">Loggout</a></li>
+    </ul>
+  </nav>
+
+</ng-template>
+
+<ng-template #noLogged>
+
+
+  <nav class="navbar">
+    <ul>
+      <li class="navbar-logo"   ><i [routerLink]="['/shared/homepage']" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
+      <li class="navbar-toggle" ><i  class="fa fa-bars"></i></li>
+     <li class="navbar-links"  ><a [routerLink]="['/shared/courses/list']" href="#">Courses</a></li>
+      <li class="navbar-links"  ><a [routerLink]="['/shared/homepage']" href="#">Abaout us</a></li>
+      <li class="navbar-links"  ><a [routerLink]="['/shared/ourTeam']" href="#">Our Team</a></li>
+      <li class="navbar-links"  ><a routerLink="shared/login" href="#">Login</a></li>
     </ul>
   </nav>
 
@@ -25,10 +41,12 @@
     <ul>
       <li class="navbar-logo"   ><i routerLink="/shared/homepage" ></i> <img src="../../../assets/logo w.png" class="myimg"></li>
       <li class="navbar-toggle" ><i routerLink="/shared/register"  class="fa fa-bars"></i></li>
+      <li class="navbar-links"  ><a routerLink="/admin/teacher/list" href="#">Teachers</a></li>
+      <li class="navbar-links"  ><a routerLink="/shared/courses/list" href="#">Courses Sale</a></li>
       <li class="navbar-links"  ><a routerLink="/admin/course/list" href="#">Courses</a></li>
       <li class="navbar-links"  ><a routerLink="/shared/homepage" href="#">Abaout us</a></li>
       <li class="navbar-links"  ><a routerLink="/admin/teacher/list" href="#">Our Team</a></li>
-      <li class="navbar-links"  ><a routerLink="shared/login" href="#">Login</a></li>
+      <li class="navbar-links"  ><a (click)="logout()">Loggout</a></li>
     </ul>
   </nav>
 </ng-template>
