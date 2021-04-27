@@ -1,17 +1,34 @@
-<script src="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="></script>
-<div class="topDiv bg-danger">
-  <h1 class="text-white ml-4">Teachers Courses</h1>
-</div>
-<div class="containerc" *ngFor="let teacher of teachers">
-
+<div class="containerc" >
   <div class="cardp">
     <div class="row">
-      <div class="col-5">
-        <a class="p-2 mx-1 text-info"     [routerLink]="['../details', teacher.teacherId]">   <i class="fa fa-eye" aria-hidden="true"></i></a>
+      <div class="col-6">
+        <img src="../../../../assets/teachertest.jpg" class="img mx-auto d-block" alt="">
+      <a class="p-2 mx-1 text-white d-block mx-auto w-50 mt-4 btn-success btn " href="https://github.com/mmmaaatttttt">Member Detail</a>
       </div>
-      <div class="col-7" >
-        <h2 >{{teacher.name}}</h2>
-        <p> {{teacher.skills}}</p>
+      <div class="col-6" >
+        <h2>Matthew Lane</h2>
+        <p > Rithm School facilitates workshops and online courses that focus on web development and more. It facilitates events and courses and offers its customers with content to improve their skills in coding.
+
+        <div class="social-media d-block">
+          <i class="col- fa fa-facebook"></i>
+          <i class="col- fa fa-linkedin"></i>
+          <i class="col- fa fa fa-twitter"></i>
+          <i class="col- fa fa-github"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cardp" *ngFor="let teacher of teachers">
+    <div class="row">
+      <div class="col-6">
+        <img src="../../../../assets/teachertest.jpg" class="img mx-auto d-block" alt="">
+      <a class="p-2 mx-1 text-white d-block mx-auto w-50 mt-4 btn-success btn "     [routerLink]="['../../admin/teacher/details', teacher.teacherId]">Member Detail</a>
+      </div>
+      <div class="col-6" >
+        <h2>{{teacher.name}}</h2>
+        <p > {{teacher.skills}}</p>
         <div class="social-media d-block">
           <i class="col- fa fa-facebook"></i>
           <i class="col- fa fa-linkedin"></i>

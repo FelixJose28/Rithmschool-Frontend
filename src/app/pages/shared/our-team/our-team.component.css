@@ -6,6 +6,7 @@
 }
 .containerc{
   width: 90%;
+  display: block;
   margin: auto;
 }
 .img{
@@ -16,6 +17,7 @@
 }
 .cardp{
   margin-top: 5%;
+  width: 90%;
   margin: 2%;
   background-color: #E7E7E7;
   padding-top: 3%;
@@ -60,4 +62,7 @@
   width: 90%;
   margin: auto;
   display: block;
+}
+.img{
+  width: 150px;
 }
